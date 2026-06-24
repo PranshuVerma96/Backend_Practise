@@ -1,0 +1,17 @@
+import { error } from "console";
+import dotenv from "dotenv";
+dotenv.config();
+
+if(!process.env.MONGO_URI){
+  throw new Error("MongoDb_uri is not defined in environment variables")
+}
+if(!process.env.JWT_SECRET){
+  throw new error("Jwt_Secret is not defined in environment variables")
+}
+
+const config = { 
+  MONGO_URI : process.env.MONGO_URI,
+  JWT_SECRET:process.env.JWT_SECRET
+}
+
+export default config;
