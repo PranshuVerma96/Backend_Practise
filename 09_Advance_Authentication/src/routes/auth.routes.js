@@ -15,6 +15,8 @@ authRouter.post('/login' , authController.loginUser);
 
 authRouter.get("/get-me",authController.getMe);
 
+
+authRouter.get('verify-email' , authController.verifyEmail)
 // get api/auth/refresh token
 
 authRouter.get("/refresh-token",authController.refreshTokens);
