@@ -5,7 +5,7 @@ const postModel = require("./models/post.model");
 const cors = require('cors');
 
 const app = express();
-// middleware
+// Middle ware
 
 app.use(cors());
 
